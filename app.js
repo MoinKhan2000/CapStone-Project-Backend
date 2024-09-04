@@ -17,6 +17,10 @@ const app = express();
 app.use(express.json());
 app.use(cookieParser());
 
+app.get('/', (req, res, next) => {
+  res.send('CapStone Project Backend is Runnning!');
+})
+
 // configure routes
 app.use("/api/storefleet/product", productRoutes);
 app.use("/api/storefleet/user", userRoutes);
